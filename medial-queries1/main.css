@@ -1,3 +1,67 @@
 body {
-  background: blanchedalmond;
+  background: ghostwhite;
+}
+
+* {
+  border: 1px solid teal;
+  overflow: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+header {
+  flex-grow: 1;
+  background-color: aqua;
+  width: 100%;
+}
+
+main {
+  flex-grow: 3;
+  background-color: chocolate;
+}
+
+footer {
+  flex-grow: 1;
+  background-color: darkgreen;
+}
+
+main, footer, header {
+  margin: 1em;
+}
+
+
+@media (max-width: 768px) {
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  header {
+    background-color: aqua;
+  }
+  
+  footer {
+    background-color: darkgreen;
+  }
+  
+  main {
+    background-color: chocolate;
+  }
+  
+  header, footer {
+    flex-grow: 1;
+  }
+  
+  main {
+    flex-grow: 3;
+  }
+  
+
 }
